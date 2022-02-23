@@ -167,7 +167,7 @@ void main(void)
 				vyberS +=1;
 			}
 			m_stav1 = a_stav1;
-			if (vyberS == 5){
+			if (vyberS == 6){
 				vyberS = 0;
 				vyberA = 0;
 			}
@@ -248,7 +248,7 @@ void main(void)
 			}
 			if (vyberS == 2){
 				lcd_gotoxy(0, 0);
-				sprintf(text, "    POLICIE     ");
+				sprintf(text, " Policejni majak");
 				lcd_puts(text);
 				
 				TIM2_SetCompare1(PWM_R = 0);
@@ -266,7 +266,7 @@ void main(void)
 			}
 			if (vyberS == 3){
 				lcd_gotoxy(0, 0);
-				sprintf(text, "     MAJAK      ");
+				sprintf(text, "  Ornzovy majak ");
 				lcd_puts(text);
 				
 				TIM2_SetCompare1(PWM_R = 0);
@@ -305,6 +305,15 @@ void main(void)
 						s = 0;
 					}
 				}
+			}
+			if (vyberS == 5){
+				lcd_gotoxy(0, 0);
+				sprintf(text, "   Modra smrt   ");
+				lcd_puts(text);
+
+				TIM2_SetCompare1(PWM_R = 0);
+				TIM2_SetCompare2(PWM_G = 0);
+				TIM2_SetCompare3(PWM_B = 1056);
 			}
 		}
 	}
